@@ -1,7 +1,7 @@
 {
   "name": "poster-component",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
@@ -10,6 +10,9 @@
     "build:umd": "rollup --config build/rollup.umd.config.js",
     "clean": "rimraf ./dist"
   },
+  "main": "dist/poster-component.umd.js",
+  "module": "dist/poster-component.esm.js",
+  "types": "dist/src/index.d.ts",
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.20"
