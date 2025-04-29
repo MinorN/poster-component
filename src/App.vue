@@ -2,7 +2,7 @@
   <div>poset 组件</div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue"
 
 export default defineComponent({
