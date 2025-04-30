@@ -1,18 +1,29 @@
 {
-  "name": "poster-component",
+  "name": "m-poster-component",
   "version": "1.0.0",
   "private": false,
   "scripts": {
+    "prepare": "husky install",
     "serve": "vue-cli-service serve",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
     "lint": "vue-cli-service lint",
     "build:esm": "rollup --config build/rollup.esm.config.js",
     "build:umd": "rollup --config build/rollup.umd.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "prepublishOnly": "npm run build"
   },
   "main": "dist/poster-component.umd.js",
   "module": "dist/poster-component.esm.js",
   "types": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "license": "MIT",
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash-es": "^4.17.20"
@@ -32,8 +43,10 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "commitlint": "^19.8.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "husky": "^9.1.7",
     "rimraf": "^3.0.2",
     "rollup": "^2.38.5",
     "rollup-plugin-css-only": "^3.1.0",

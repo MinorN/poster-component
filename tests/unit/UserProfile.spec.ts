@@ -72,6 +72,6 @@ describe("UserProfile component", () => {
     expect(mockedRoutes).toEqual(["/"])
   })
   afterEach(() => {
-    ;(message as jest.Mocked<typeof message>).success.mockReset()
+    (message as jest.Mocked<typeof message>).success.mockReset()
   })
 })
