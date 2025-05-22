@@ -1,6 +1,6 @@
 {
   "name": "m-poster-component",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "scripts": {
     "prepare": "husky install",
@@ -12,8 +12,8 @@
     "clean": "rimraf ./dist",
     "prepublishOnly": "npm run build"
   },
-  "main": "dist/poster-component.umd.js",
-  "module": "dist/poster-component.esm.js",
+  "main": "dist/m-poster-component.umd.js",
+  "module": "dist/m-poster-component.esm.js",
   "types": "dist/src/index.d.ts",
   "files": [
     "dist"
