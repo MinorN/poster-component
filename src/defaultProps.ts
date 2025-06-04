@@ -135,3 +135,7 @@ export const shapeStylePropsNames = without(
   "actionType",
   "url"
 )
+
+export type AllComponentProps = TextComponentProps &
+  ImageComponentProps &
+  ShapeComponentProps

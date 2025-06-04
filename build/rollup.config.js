@@ -8,7 +8,13 @@ const tsOverrides = {
   compilerOptions: {
     declaration: true,
   },
-  exclude: ["node_modules", "src/App.vue", "src/main.ts"],
+  exclude: [
+    "node_modules",
+    "src/App.vue",
+    "src/main.ts",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+  ],
 }
 /**
  * @type {import('rollup').RollupOptions}
